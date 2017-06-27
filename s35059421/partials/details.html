@@ -1,0 +1,133 @@
+<section class="details">
+
+	<!-- 1. Navigation Bar-->
+	<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+				  data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>	
+				  <div class="dropdown">
+					<a class="navbar-brand dropdown" href="" data-toggle="dropdown">Business Name<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">About</a></li>
+					  <li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			  
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="signin.html" data-toggle="tabs">Sign In</a></li> 
+					<li><a href="signup.html" data-toggle="tabs">Sign Up</a></li>
+					<!-- Search Form -->
+					<!-- <li class="dropdown">
+						<a data-toggle="dropdown" style="padding: 8px 15px">
+							<input ng-model="query" placeholder="Search..." type="text" class="form-control">
+						</a>
+						<ul class="dropdown-menu" ng-show="query">
+							<li ng-repeat="item in products | filter: query">
+								<a href="#/details/{{products.indexOf(item)}}">
+									<img ng-src="images/{{item.id}}.jpg" alt="Photo of {{item.productname}}">
+									<div class="info">
+									  <h5>{{item.id}}</h5>
+									  <h6>{{item.productname}}</h6>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- Search Form -->
+				<!-- </ul>
+				
+			</div>
+        </div>	 
+	</nav> -->
+	
+	<!-- 3. Card of Product Details-->
+	<div class="container" class="ng-scope" ng-view="">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<!-- Product Images -->
+					<div class="preview col-md-4">
+						
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img ng-src='{{products[whichItem].flower1ID}}' alt='Photo1' /></div>
+						  <div class="tab-pane" id="pic-2"><img ng-src='{{products[whichItem].flower2ID}}' alt='Photo2' /></div>
+						  <div class="tab-pane" id="pic-3"><img ng-src='{{products[whichItem].flower3ID}}' alt='Photo3' /></div> 
+						</div>
+			
+						<ul class="preview-thumbnail nav nav-tabs">
+							<li class="active"><a data-target="#pic-1" data-toggle="tab"><img ng-src='{{products[whichItem].flower1ID}}' alt='Photo1' /></a></li>
+							<li><a data-target="#pic-2" data-toggle="tab"><img ng-src='{{products[whichItem].flower2ID}}' alt='Photo2' /></a></li>
+							<li><a data-target="#pic-3" data-toggle="tab"><img ng-src='{{products[whichItem].flower3ID}}' alt='Photo3' /></a></li>
+						</ul>	
+					</div>
+					
+					<!-- Product Details -->
+					<div class="details col-md-8">
+						<h3 class="product-title">{{products[whichItem].id}}</h3>
+						<h4><b>{{products[whichItem].productname}}</b></h4>
+						<h5 class="price">{{products[whichItem].price}}&nbsp &nbsp &nbsp &nbsp Qty
+							<select class="selectpiker">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</h5>
+						<div class="rating">
+							<div class="star">
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star-empty"></span>
+								<span class="glyphicon glyphicon-star-empty"></span>
+							</div>
+							<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+						</div>
+						
+						<section class="tab" ng-controller ="TabController as tab">
+							<ul id="myTab" class="nav nav-tabs">
+								<li ng-class="{ active: tab.isSet(1)}"><a href ng-click="tab.setTab(1)" data-toggle="tab">What it is</a></li>
+								<li ng-class="{ active: tab.isSet(2)}"><a href ng-click="tab.setTab(2)" data-toggle="tab">What it does</a></li>
+								<li ng-class="{ active: tab.isSet(3)}"><a href ng-click="tab.setTab(3)" data-toggle="tab">How to use</a></li>
+							</ul>
+						
+							<!-- <div id="myTabContent" class="tab-content">
+								<div class="tab-pane active" ng-show="tab.isSet(1)">
+								  <h6><b>What it is:</b></h6>
+								  <p>{{products[whichItem].whatitis}}</p>
+								</div>
+								
+								<div class="tab-pane active" ng-show="tab.isSet(2)">
+								  <h6><b>What it does:</b></h6>
+								  <p>{{products[whichItem].whatitdoes}}</p>
+								</div>
+								
+								<div class="tab-pane active" ng-show="tab.isSet(3)">
+								  <h6><b>How to Use</b></h6>
+								  <p>{{products[whichItem].howtouse}}</p>
+								</div>
+								
+							</div> -->
+						</section>
+						
+						<div class="action">
+							<a href="addtocart.html" class="add-to-cart btn btn-default" type="button">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+							<a href="love.html" class="like btn btn-default" type="button">Add To Love <span class="glyphicon glyphicon-heart"></span></a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

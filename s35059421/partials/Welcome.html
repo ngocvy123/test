@@ -1,0 +1,106 @@
+
+<!--Welcome screen-->
+
+	 <div class="container-fluid" style="margin-top:80px">
+		 <div class="row">
+			 <div class="col-sm-12">
+				 <img src="image/logo.jpg" width="40%" class="img-responsive center-block" alt="Image">
+				 <img src="image/welcome.jpg" width="25%" class="img-responsive center-block" alt="Image">
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-12">
+				 <div class="panel panel-default"> 
+					 <div class="panel panel-heading">
+						 <h3><strong>Our Customers' Favourites</strong>&nbsp <span class="fa fa-heart"></span></h3>
+					 </div>
+					 <div class="panel panel-body">
+						 <div class="row">
+							 <div class="col-sm-4" ng-repeat="item in products | orderBy: 'id'">
+								 <a href="#/ProductDetails">
+									 <div class="panel panel-body hovereffect"><img ng-src="image/{{item.id}}.jpg" class="img-responsive center-block" style="width:45%"  alt="Image">
+										<a href="#/ProductDetails">
+											<div class="overlay"><blockquote>{{item.quote}}</blockquote></div>
+										</a>
+									 </div>
+								 </a>
+								 <div class="panel panel-footer">
+									 <div class="row">
+										 <div class="col-xs-8"><strong>{{item.productname}}</strong> - {{item.price}}</div>
+										 <div class="col-xs-4">
+											 <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#AddToCartModal">
+												 <span class="fa fa-shopping-basket"></span> Add to Cart
+											 </button>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+						 </div>
+					 </div>
+				 </div>	 
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-12">
+				 <div class="panel panel-default">
+					 <div class="panel panel-heading"><h3><strong>Bouquet's Categories</strong></h3></div>
+					 <div class="panel panel-body">
+						 <div class="row">
+							 <div class="col-sm-4">
+								 <div class="panel panel-default">
+									 <div class="panel panel-header"><h4 class="text-center">Hand Bouquet</h4></div>
+									 <div class="panel panel-body"><img src="image/bouquet7.jpg" class="img-responsive center-block" style="width:60%"  alt="Image"></div>
+								 </div>
+							 </div>
+							 <div class="col-sm-4">
+								 <div class="panel panel-default">
+									 <div class="panel panel-header"><h4 class="text-center">Basket Bouquet</h4></div>
+									 <div class="panel panel-body"><img src="image/bouquet8.jpg" class="img-responsive center-block" style="width:53%"  alt="Image"></div>
+								 </div>
+							 </div>
+							 <div class="col-sm-4">
+								 <div class="panel panel-default">
+									 <div class="panel panel-header"><h4 class="text-center">Vase Bouquet</h4></div>
+									 <div class="panel panel-body"><img src="image/bouquet9.jpg" class="img-responsive center-block" style="width:50%"  alt="Image"></div>
+								 </div>
+							 </div>
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	</div>
+ 
+	 <!-- Modal -->
+	 <div class="modal fade" id="AddToCartModal" role="dialog">
+		 <div class="modal-dialog">
+	 <!-- Modal content-->
+			 <div class="modal-content">
+				 <div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal">&times;</button>
+					 <h4 class="modal-title; text-success"><strong>Great Choice!</strong></h4>
+				 </div>
+				 <div class="modal-body">
+					 <h5>How many vases would you like?</h5>
+					 <h5>Quantity</h5>
+					 <div class="input-group col-xs-3">
+						 <span class="input-group-btn">
+							 <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quantity">
+								 <span class="fa fa-minus"></span>
+							 </button>
+						 </span>
+						 <input type="text" name="quantity" class="form-control input-number" value="1" min="1">
+						 <span class="input-group-btn">
+					 		 <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quantity">
+								 <span class="fa fa-plus"></span>
+							 </button>
+						 </span>
+					 </div>	 
+				 </div>
+				 <div class="modal-footer">
+					 <a href="" class="btn btn-success" data-dismiss="modal"><span class="fa fa-shopping-basket"> Add to Cart</span></a>
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
