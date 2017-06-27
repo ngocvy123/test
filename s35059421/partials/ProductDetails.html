@@ -1,0 +1,90 @@
+<!--ProductDetails-->
+	 <!--Product Details Add To Cart-->
+	 <div class="container-fluid" style="margin-top:80px">
+		 <div class="row">
+			 <div class="col-sm-12">
+				 <h1><strong>Lovely Rosie</strong></h1>
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-4">
+				 <img src="image/bouquet6.jpg" class="img-responsive center-block" width="100%" alt="Image">
+			 </div>
+			 <div class="col-sm-8">
+				 <h3><strong>Price:</strong> 20.00$&nbsp
+					 <!-- Open Modal -->
+					 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#AddToCartModal">
+						 <span class="fa fa-shopping-basket"></span> Add to Cart
+					 </button>
+				 </h3>
+				 <h3><strong>Inspiration</strong></h3>
+				 <blockquote>But he who dares not grasp the thorns, should never grave the rose. <footer>Anne Bronte</footer></blockquote>
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-12">
+				 <h3><strong>Ingredients</strong></h3>
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-4">
+				 <img src="image/flower1.gif" class="img-responsive center-block" width="50%" alt="Image">
+			 </div>
+			 <div class="col-sm-8">
+				 <h5><strong>Pink Rose</strong></h5>
+				 <p>Light pink roses are associated with gentleness and admiration</p>
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-4">
+				 <img src="image/flower2.jpg" class="img-responsive center-block" width="50%" alt="Image">
+			 </div>
+			 <div class="col-sm-8">
+				 <h5><strong>Pink Lily</strong></h5>
+				 <p>Pink stargazer lilies represent wealth and prosperity</p>
+			 </div>
+		 </div>
+		 <div class="row">
+			 <div class="col-sm-4">
+				 <img src="image/flower3.jpg" class="img-responsive center-block" width="50%" alt="Image">
+			 </div>
+			 <div class="col-sm-8">
+				 <h5><strong>Pink Gerbera</strong></h5>
+				 <p>Gerbera daisies can mean innocence and purity</p>
+			 </div>
+		 </div>
+	 </div>
+	 
+	 <!-- Modal -->
+	 <div class="modal fade" id="AddToCartModal" role="dialog">
+		 <div class="modal-dialog">
+	 <!-- Modal content-->
+			 <div class="modal-content">
+				 <div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal">&times;</button>
+					 <h4 class="modal-title; text-success"><strong>Great Choice!</strong></h4>
+				 </div>
+				 <div class="modal-body">
+					 <h5>How many vases would you like?</h5>
+					 <h5>Quantity</h5>
+					 <div class="input-group col-xs-3">
+						 <span class="input-group-btn">
+							 <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quantity">
+								 <span class="fa fa-minus"></span>
+							 </button>
+						 </span>
+						 <input type="text" name="quantity" class="form-control input-number" value="1" min="1">
+						 <span class="input-group-btn">
+					 		 <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quantity">
+								 <span class="fa fa-plus"></span>
+							 </button>
+						 </span>
+					 </div>	 
+				 </div>
+				 <div class="modal-footer">
+					 <button type="button" class="btn btn-success" data-dismiss="modal"><span class="fa fa-shopping-basket"> Add to Cart</span></a>
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
