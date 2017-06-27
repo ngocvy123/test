@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	 <title>Let's Trade</title>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="css/hovering.css">
+	 <link href = "image/logoimage.png" rel="icon" type="image">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script src="lib/angular.min.js"></script>
+	 <script src="lib/angular-route.min.js"></script>
+	 <script src="js/myApp.js"></script>
+	 <script src="js/controller.js"></script>
+	 <script src="js/tooltip.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse; navbar navbar-inverse navbar-fixed-top">
+		 <div class="container-fluid">
+			 <div class="navbar-header">
+				 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navibar">
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>                        
+				 </button>
+				 <a class="navbar-brand" href="index.html">Let's Trade</a>
+			 </div>
+			 <div class="collapse navbar-collapse" id="Navibar">
+				 <ul class="nav navbar-nav navbar-right">
+					 <li>
+						 <a href="#/tradeRequest" data-toggle="tooltip" data-placement="bottom" title="Trade Requests"><span class="fa fa-envelope"></span> Trade Requests</a>
+					 </li>
+					 <li class="dropdown">
+						 <a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="fa fa-user"></span> Hello
+							 <span class="fa fa-caret-down"></span>
+						 </a>
+						 <ul class="dropdown-menu">
+							 <li><a href="#"><span class="fa fa-user"></span> My Account</a></li>
+							 <li><a href="#/myInventory"><span class="fa fa-shopping-basket"></span> My Inventory</a></li>
+							 <li><a href="#/myWishlist"><span class="fa fa-heart"></span> My Wishlist</a></li>
+							 <li><a href="#"><span class="fa fa-sign-out"></span> Sign out</a></li>
+						 </ul>
+					 </li>		 
+				 </ul>
+			 </div>
+		 </div>
+	 </nav>
+	 <div ng-view>
+	 </div>
+</body>
+<footer class="container-fluid text-center">
+	 <hr>
+	 <img src="image/logo.jpg" width="10%" class="img-responsive center-block" alt="Image"></br>
+	 <p><strong>Contact us via </strong> <a href="#" class="fa fa-facebook-square"  data-toggle="tooltip" title="Facebook"></a>&nbsp <a class="fa fa-instagram" href="#" data-toggle="tooltip" title="Instagram"></a>&nbsp <a class="fa fa-envelope" href="mailto:s3505942@rmit.edu.vn" data-toggle="tooltip" title="Email"></a> </p>
+</footer>
+</html>
